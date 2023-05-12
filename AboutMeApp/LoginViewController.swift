@@ -22,7 +22,7 @@ final class LoginViewController: UIViewController {
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text
+        welcomeVC.userName = correctUserName
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -37,11 +37,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func userNameButton() {
-        showAlert(withTitle: "Oops!", andMessage: "Your name is User")
+        showAlert(withTitle: "Oops!", andMessage: "Your name is \(correctUserName)")
     }
     
     @IBAction func passwordButton() {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is Password")
+        showAlert(withTitle: "Oops!", andMessage: "Your password is \(correctPassword)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

@@ -9,18 +9,15 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
 
-    @IBOutlet var yourNameTF: UITextField!
+    @IBOutlet var welcomeUser: UILabel!
     @IBOutlet var logOutButton: UIButton!
     
-    var userName: String!
+    var userName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 10
-        yourNameTF.text = userName
+        welcomeUser.text = "Welcome, \(userName)!"
     }
     
-    @IBAction func logOutButtonTapped() {
-        dismiss(animated: true)
-    }
 }
