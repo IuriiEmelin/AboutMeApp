@@ -12,12 +12,12 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var yourNameTF: UITextField!
     @IBOutlet var logOutButton: UIButton!
     
-    var yourName: String!
+    var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 10
-        yourNameTF.text = yourName
+        yourNameTF.text = userName
     }
     
     @IBAction func logOutButtonTapped() {

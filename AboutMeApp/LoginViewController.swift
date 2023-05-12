@@ -15,15 +15,16 @@ final class LoginViewController: UIViewController {
     private let correctUserName = "User"
     private let correctPassword = "Password"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTF.text
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         guard userNameTF.text == correctUserName, passwordTF.text == correctPassword else {
             showAlert(withTitle: "Invalid login or password",
@@ -33,14 +34,6 @@ final class LoginViewController: UIViewController {
         }
         
         return true
-    }
-    
-    @IBAction func logInButtonTapped() {
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.yourName = userNameTF.text
     }
     
     @IBAction func userNameButton() {
