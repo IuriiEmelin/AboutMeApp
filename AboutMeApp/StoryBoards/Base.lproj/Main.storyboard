@@ -36,7 +36,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                 <connections>
-                                    <segue destination="XdR-QW-TfU" kind="presentation" modalPresentationStyle="fullScreen" id="fup-9d-P7w"/>
+                                    <segue destination="Z3C-6B-mUP" kind="presentation" modalPresentationStyle="fullScreen" id="hkh-Ed-8vV"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gA8-0m-Dt0">
@@ -86,9 +86,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="4"/>
+            <point key="canvasLocation" x="1698" y="-48"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="aPL-YS-b7S">
             <objects>
                 <viewController id="XdR-QW-TfU" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCr-Kp-Akw">
-                                <rect key="frame" x="100" y="447" width="175" height="55"/>
+                                <rect key="frame" x="100" y="398" width="175" height="55"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out">
@@ -134,6 +134,7 @@
                             <constraint firstItem="cYj-ji-ZXs" firstAttribute="bottom" secondItem="eCr-Kp-Akw" secondAttribute="bottom" constant="165" id="lCi-u8-pp5"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="KIm-G5-XVt"/>
                     <connections>
                         <outlet property="logOutButton" destination="eCr-Kp-Akw" id="Ztk-8b-pq3"/>
                         <outlet property="welcomeUser" destination="w0v-2n-3SX" id="9Sa-XK-RBI"/>
@@ -142,10 +143,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BL7-FD-uOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qIh-h1-jwc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="830" y="4"/>
+            <point key="canvasLocation" x="2433" y="729"/>
+        </scene>
+        <!--Iurii Emelin-->
+        <scene sceneID="eKa-1R-fJ2">
+            <objects>
+                <viewController id="DGH-PT-A5e" customClass="PersonalInfViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sO3-3g-lep">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="i7N-cx-ALd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Iurii Emelin" id="T0B-yJ-G0W">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="zhF-bS-l17">
+                            <connections>
+                                <segue destination="qxk-2V-PUB" kind="show" id="swF-eg-tOd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UA4-wo-rY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3897" y="728"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ckg-pe-Qun">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z3C-6B-mUP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fbf-eK-ALM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XdR-QW-TfU" kind="relationship" relationship="viewControllers" id="BrC-0C-7SI"/>
+                        <segue destination="uqR-Fm-LCB" kind="relationship" relationship="viewControllers" id="C5m-35-jZ8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="986-xi-H49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="-48"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="QmR-6V-4hh">
+            <objects>
+                <viewController id="qxk-2V-PUB" customClass="BioViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="URo-Sc-Job">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RpU-HT-D2h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="sz3-4U-frC"/>
+                    <navigationItem key="navigationItem" id="ThO-JD-mDh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ys1-TS-RAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4654" y="728"/>
+        </scene>
+        <!--Iurii Emelin-->
+        <scene sceneID="ogs-bO-cdN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uqR-Fm-LCB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Iurii Emelin" image="person.fill" catalog="system" id="obB-t5-pcy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LhW-Ra-owS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DGH-PT-A5e" kind="relationship" relationship="rootViewController" id="rEj-nC-f0p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9d-JJ-Ed4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3151" y="728"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

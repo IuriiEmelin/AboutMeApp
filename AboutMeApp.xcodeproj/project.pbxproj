@@ -15,6 +15,8 @@
 		5F9B3FDD2A0B5A6500F3840E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B3FDB2A0B5A6500F3840E /* LaunchScreen.storyboard */; };
 		5F9B3FE52A0C08E100F3840E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B3FE42A0C08E100F3840E /* WelcomeViewController.swift */; };
 		5F9B3FEC2A0FA4AF00F3840E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B3FEB2A0FA4AF00F3840E /* User.swift */; };
+		5FD144DA2A0FB8E9003C87D8 /* PersonalInfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD144D92A0FB8E9003C87D8 /* PersonalInfViewController.swift */; };
+		5FD144DC2A101098003C87D8 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD144DB2A101098003C87D8 /* BioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5F9B3FDE2A0B5A6500F3840E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F9B3FE42A0C08E100F3840E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5F9B3FEB2A0FA4AF00F3840E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5FD144D92A0FB8E9003C87D8 /* PersonalInfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfViewController.swift; sourceTree = "<group>"; };
+		5FD144DB2A101098003C87D8 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 			children = (
 				5F9B3FD42A0B5A6500F3840E /* LoginViewController.swift */,
 				5F9B3FE42A0C08E100F3840E /* WelcomeViewController.swift */,
+				5FD144D92A0FB8E9003C87D8 /* PersonalInfViewController.swift */,
+				5FD144DB2A101098003C87D8 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,10 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD144DC2A101098003C87D8 /* BioViewController.swift in Sources */,
 				5F9B3FD52A0B5A6500F3840E /* LoginViewController.swift in Sources */,
 				5F9B3FE52A0C08E100F3840E /* WelcomeViewController.swift in Sources */,
 				5F9B3FD12A0B5A6500F3840E /* AppDelegate.swift in Sources */,
 				5F9B3FEC2A0FA4AF00F3840E /* User.swift in Sources */,
+				5FD144DA2A0FB8E9003C87D8 /* PersonalInfViewController.swift in Sources */,
 				5F9B3FD32A0B5A6500F3840E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
