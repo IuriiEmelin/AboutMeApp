@@ -37,4 +37,8 @@ final class PersonalInfViewController: UIViewController {
         print("User ID: ", user.id)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userBioVC = segue.destination as? BioViewController else { return }
+        userBioVC.user = user
+    }
 }
