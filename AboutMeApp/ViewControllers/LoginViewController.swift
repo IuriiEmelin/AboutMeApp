@@ -12,8 +12,17 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let correctUserName = "User"
-    private let correctPassword = "Password"
+    private let user = User.getUser()
+    //private let correctUserName = "User"
+    //private let correctPassword = "Password"
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = user.login
+        passwordTF.text = user.password
+        
+        print("User ID: ", user.id)
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -21,21 +30,16 @@ final class LoginViewController: UIViewController {
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
-        guard let viewControllers = tabBarController.viewControllers else { return }
-        
-        for viewController in viewControllers {
-            if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = correctUserName
-            }
+        guard let tabBarController = segue.destination as? TabBarController else {
+            return
         }
+        tabBarController.user = user
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == correctUserName, passwordTF.text == correctPassword else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(withTitle: "Invalid login or password",
                       andMessage: "Please, enter correct login and password")
-            passwordTF.text = ""
             return false
         }
         
@@ -43,11 +47,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func userNameButton() {
-        showAlert(withTitle: "Oops!", andMessage: "Your name is \(correctUserName)")
+        showAlert(withTitle: "Oops!", andMessage: "Your name is \(user.login)")
     }
     
     @IBAction func passwordButton() {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is \(correctPassword)")
+        showAlert(withTitle: "Oops!", andMessage: "Your password is \(user.password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -65,5 +69,6 @@ extension LoginViewController {
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
+        passwordTF.text = ""
     }
 }

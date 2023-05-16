@@ -12,12 +12,13 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeUser: UILabel!
     @IBOutlet var logOutButton: UIButton!
     
-    var userName = ""
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logOutButton.layer.cornerRadius = 10
-        welcomeUser.text = "Welcome, \(userName)!"
+        welcomeUser.text = "Welcome, \(user.person.fullName)!"
+        
+        print("User ID: ", user.id)
     }
-    
 }
